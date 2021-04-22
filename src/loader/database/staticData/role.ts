@@ -1,0 +1,46 @@
+export const roleStatic =  [
+  {
+    name: "admin",
+    code: "AD",
+    createBook: true,
+    editBook: true,
+    activeUserBook: true,
+    removeBook: true,
+    createClass: true,
+    removeClass: true,
+    editClass: true,
+    updateRole: true,
+    viewUser: true,
+    blockUser: true,
+    editUser: true,
+  },
+  {
+    name: "editor",
+    code: "ED",
+    createBook: true,
+    editBook: true,
+    activeUserBook: true,
+    editClass: true,
+    viewUser: true,
+    blockUser: true,
+  },
+  {
+    name: "teacher",
+    code: "TC",
+    createClass: true,
+    removeClass: true,
+    editClass: true,
+  },
+  {
+    name: "member",
+    code: "ME",
+  },
+  {
+    name: "designer",
+    code: "DS",
+  },
+  {
+    name: "student",
+    code: "ST",
+  },
+];
