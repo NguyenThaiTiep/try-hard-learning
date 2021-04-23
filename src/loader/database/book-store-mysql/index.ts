@@ -1,6 +1,7 @@
 import { createConnection } from "typeorm";
 import { configDb } from "./config";
 import { roleLoader } from "./role.loader";
+import { userLoader } from "./user.loader";
 
 export const connectDatabase = () =>
   createConnection(configDb as any)
@@ -8,7 +9,7 @@ export const connectDatabase = () =>
       console.log("Connected Database");
       try {
         await roleLoader();
-        console.log("loader StaticData");
+        await userLoader();
       } catch (e) {
         console.log(e);
       }

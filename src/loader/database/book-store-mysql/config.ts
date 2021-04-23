@@ -1,5 +1,8 @@
+import { StoreBook } from "../../../settings/constant";
+
 export const configDb = {
   type: "mysql",
+  name: StoreBook,
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   username: process.env.DB_USERNAME,

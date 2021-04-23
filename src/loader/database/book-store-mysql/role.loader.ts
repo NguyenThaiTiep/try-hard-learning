@@ -1,12 +1,14 @@
 import { plainToClass } from "class-transformer";
-import { getRepository } from "typeorm";
-import { Role } from "../../entity/models/user/role";
-import { mapTo } from "../../untils/mapFunc";
+import { getRepository, Repository } from "typeorm";
+import { Role } from "../../../entity/models/user/role";
+import { getRepositoryBookStore } from "../../../helper/storeHepler/repository.helper";
+import { mapTo } from "../../../untils/mapFunc";
 import { roleStatic } from "./staticData/role";
 
 export const roleLoader = async () => {
-  const roleRepo = await getRepository(Role);
   try {
+    const roleRepo = getRepositoryBookStore(Role) as Repository<Role>;
+    let roleElements = [] as Role[];
     for (let roleData of roleStatic) {
       let role = await roleRepo.findOne({ code: roleData.code });
       let roleInput = plainToClass(Role, roleData);
@@ -15,8 +17,9 @@ export const roleLoader = async () => {
       } else {
         role = roleInput;
       }
-      await roleRepo.save(role);
+      roleElements.push(role);
     }
+    await roleRepo.save(roleElements);
   } catch (e) {
     console.log(e);
   }
