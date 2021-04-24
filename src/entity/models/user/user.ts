@@ -5,11 +5,8 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
-  NamingStrategyInterface,
   OneToMany,
-  PrimaryColumn,
   PrimaryGeneratedColumn,
-  Timestamp,
   UpdateDateColumn,
 } from "typeorm";
 import { UserBook } from "../book/userBook";

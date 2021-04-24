@@ -7,7 +7,7 @@ import { roleStatic } from "./staticData/role";
 
 export const roleLoader = async () => {
   try {
-    const roleRepo = getRepositoryBookStore(Role) as Repository<Role>;
+    const roleRepo = getRepositoryBookStore(Role);
     let roleElements = [] as Role[];
     for (let roleData of roleStatic) {
       let role = await roleRepo.findOne({ code: roleData.code });

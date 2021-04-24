@@ -6,7 +6,7 @@ import { mapTo } from "../../../untils/mapFunc";
 import { userStatic } from "./staticData/user";
 
 export const userLoader = async () => {
-  const userRepo = (await getRepositoryBookStore(User)) as Repository<User>;
+  const userRepo = getRepositoryBookStore(User);
   try {
     let userElements = [] as User[];
     for (let userData of userStatic) {
