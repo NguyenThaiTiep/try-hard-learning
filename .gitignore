@@ -6,7 +6,7 @@ dist/
 tmp/
 temp/
 *.env
-/public
+public/
 
 sm-questions-server.zip
 build.zip
