@@ -1,3 +1,3 @@
-export const hostServer = process.env.ROLE
-  ? "http://localhost:3000"
-  : "http://localhost:3000";
+export const hostServer = (process.env.NODE_ENV = "production"
+  ? "https://api.hoclieu.vn/"
+  : "http://localhost:3000");
