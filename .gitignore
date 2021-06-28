@@ -2,6 +2,12 @@
 .vscode/
 node_modules/
 build/
+dist/
 tmp/
 temp/
 *.env
+
+sm-questions-server.zip
+build.zip
+build_test.zip
+sm-questions-server/
