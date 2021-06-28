@@ -9,7 +9,7 @@ export const userStatic = [
   },
   {
     name: "admin01",
-    roleCode: "AD",
+    roleCode: "ED",
     email: "nguyenthaitiep1235@gmail.com",
     password: "123qwe",
   },

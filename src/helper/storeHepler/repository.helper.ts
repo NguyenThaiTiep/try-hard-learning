@@ -1,15 +1,10 @@
-import { EntityTarget, getRepository, Repository } from "typeorm";
+import { EntitySchema, getRepository, ObjectType, Repository } from "typeorm";
 
-import { StoreBook, StoreQuestion } from "../../settings/constant";
+import { StoreQuestion } from "../../settings/constant";
 
 export function getRepositoryBookStore<Entity>(
-  entityClass: EntityTarget<Entity>
+  entityClass: ObjectType<Entity> | EntitySchema<Entity> | string,
+  connectionName = "default"
 ) {
-  return getRepository(entityClass, StoreBook) as Repository<Entity>;
-}
-
-export function getRepositoryQuestionStore<Entity>(
-  entityClass: EntityTarget<Entity>
-) {
-  return getRepository(entityClass, StoreQuestion) as Repository<Entity>;
+  return getRepository(entityClass, connectionName) as Repository<Entity>;
 }

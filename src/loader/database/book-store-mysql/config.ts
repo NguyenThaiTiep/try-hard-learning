@@ -1,8 +1,7 @@
-import { StoreBook } from "../../../settings/constant";
-
+import { StoreQuestion } from "../../../settings/constant";
+const dir = process.env.NODE_ENV == "production" ? "dist" : "src/";
 export const configDb = {
-  type: "mysql",
-  name: StoreBook,
+  type: "postgres",
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   username: process.env.DB_USERNAME,
@@ -10,12 +9,12 @@ export const configDb = {
   database: process.env.DB_DATABASE,
   synchronize: true,
   logging: false,
-  entities: ["src/entity/**/*{.ts, .js}"],
-  migrations: ["src/migration/**/*{.ts, .js}"],
-  subscribers: ["src/subscriber/**/*{.ts, .js}"],
+  entities: [dir + "/**/entity/**/*.js"],
+  migrations: [dir + "/**/migration/**/*{.ts, .js}"],
+  subscribers: [dir + "/**/subscriber/**/*{.ts, .js}"],
   cli: {
-    entitiesDir: "src/entity",
-    migrationsDir: "src/migration",
-    subscribersDir: "src/subscriber",
+    entitiesDir: dir + "/entity",
+    migrationsDir: dir + "/migration",
+    subscribersDir: dir + "/subscriber",
   },
 };

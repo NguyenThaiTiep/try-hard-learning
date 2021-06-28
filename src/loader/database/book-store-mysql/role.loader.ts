@@ -1,13 +1,14 @@
 import { plainToClass } from "class-transformer";
 import { getRepository, Repository } from "typeorm";
-import { Role } from "../../../entity/models/user/role";
+import { Role } from "../../../entity/user/role";
+
 import { getRepositoryBookStore } from "../../../helper/storeHepler/repository.helper";
 import { mapTo } from "../../../untils/mapFunc";
 import { roleStatic } from "./staticData/role";
 
 export const roleLoader = async () => {
   try {
-    const roleRepo = getRepositoryBookStore(Role);
+    const roleRepo = getRepository(Role);
     let roleElements = [] as Role[];
     for (let roleData of roleStatic) {
       let role = await roleRepo.findOne({ code: roleData.code });

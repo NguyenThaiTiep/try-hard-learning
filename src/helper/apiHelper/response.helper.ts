@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express";
 export const handleResponse = (
   response: Response,
   status = 200,
-  data?: {
+  data = {} as {
     message?: string;
     data?: any;
   }
@@ -75,3 +75,4 @@ export enum ResponseCode {
   NOT_FOUND = 404,
   SERVER_ERROR = 500,
 }
+export { Response };

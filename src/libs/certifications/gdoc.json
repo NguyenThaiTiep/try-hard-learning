@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "thuvienapi",
+  "private_key_id": "7f7fb106500f12ddda3a6dd5f77784f8455b26ee",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDFLgkb0CBxfd/M\n/9aU1eptVOkkvlETOtv0FpT+5sRzBVahCCbv4luUzGr1QoBRzRY8oUwAoT7fd4w+\nUhGHLE5QilFvTyU6QjeYJHwU9dnfbaVREdfb7gxAzBYK6YNJVz9l9MzNmaqWn1OL\nLo/ozm1BZroFpTaORdeQjdGE3LhLBdSYv1OvmpKyLYm+PDzWeIZ3uIDdMwi1GPVW\niJQL8ltn1smDm4zTD3rPRWkYgTKz8I9vM1Jh8uSKUXRjWHRqhiwm4xlud2RotsQ3\nHYPnW96MFJGDRI9Y2+L6d2FZ5n1MNapd0o6fMfyLJfGXQXjlp6yIKrJ6jn6a68aM\nTGV0cmWrAgMBAAECggEATUztZDp1JZkHzmmz2Xh9ZWxG1FFKHoRSK4BY3A9jD4aV\nvh6giSWP6qcy/UCbZrZEk/NWBN8x81B+KgZpebksYJXBNCZufUbtXZdcD6mMRvPI\nvh4FJmLN6e84awG9ptht8c4FJksqXc9LZMKVx1p56YxYvBLXbvJBfpmifHg9Radr\n5jEMBtBhFx6NaPWFKAP4RHgrsTtYzoVhFCF5h+blrMFhkLLRVKkp+hxCK65yrU7k\nkIQSGagxR1BINEzVYb1JT9IKu1GrwS3ndI3bfb6R7DHDV/GfQ0DRm9HL7bMZAq8a\nwXoolx4JkmNmzA94luiJIqTgrOg0z4HDVhm7ghmDEQKBgQD5GU9+8bcA+oyXToYj\n7X9wKa4DvKwEr8HUHPN3N1b2k+G6zS0ei35cCHzRmld9B/q2eWN9kAnnRr79s1gP\niSVa+kvtXwCYVouidC8KTHfivCtql/5Fam0Sstuc8v3haEb+KERuZF1x07uyi5uD\nfSQHyvghw9UVK0EFPWxCjzgduwKBgQDKpH+bWbtV5gE0NCCXYz/6aAC2ZWc0i/3w\n6M8NOR6anz9FZ3pSkJ4zmn8I5MfspUD+BGhiSqBB/E8bWMLqFVa5GaAhFNsE797u\nTYSFvDWlmyJ0YIlFC5d5GnPb4dbUwc840LmxW4+KD0C+j2UBvrEMjBMrp/QtZqdi\nRJO577Rg0QKBgFp75TKZnv5OBM/ZiER4uvgFS96zpFC3f1MLiSze/0nmgfKXITKd\nPTM1KhIBXJJgWaP7CDbOIarPOgVyJiTOjrEzhm0dO1wa4/II/iVhjZLhA2xe9dBF\nToWiTr/+TFaayF7+RY1MC92TKfU7XSwwQuxJwESTnE1qPt4mZ7Ltz1aNAoGADYSz\nzpVJ3g0d/3GKyw6f8gCGK6TQIb1FD5E4XtV0qTP+cI7api9nnmGsH9fDTpInp8p7\nfDMmRcCjNlvRhPQveOGwwQQ3KDkoUhVxxcosegPDZKgcADMpw7Z0DDMgtcjIHi4u\ndRp6lOc3ln7Sai9ieEfP75WgwHacq/2PLVREYEECgYBrxXulEA8q6vfOpdkuyLls\nonVIxzwXUtdiPRPTN2f8Nzn1+BPBIug5XNft9fuijrF+Z7TyjTu++mMyZ2mhLg0J\n2T3jzHDFEeixXVV9BjCTVkn3O4IBJkNOxlVMUVUMCzBmzcFFQytk8K9r//qTiKCb\ne38CrI34GcB3OX0m+7X5PQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "clientgoodoc-nguyentiep@thuvienapi.iam.gserviceaccount.com",
+  "client_id": "109850516578835834033",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/clientgoodoc-nguyentiep%40thuvienapi.iam.gserviceaccount.com"
+}

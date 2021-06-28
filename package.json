@@ -3,26 +3,49 @@
   "version": "0.0.1",
   "description": "Awesome project developed with TypeORM.",
   "devDependencies": {
-    "ts-node": "3.3.0",
-    "@types/node": "^8.0.29",
-    "typescript": "3.3.3333"
+    "@types/md5": "^2.3.0",
+    "@types/sharp": "^0.28.3",
+    "ts-loader": "^9.2.3",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/node": "^15.12.5",
     "body-parser": "^1.19.0",
+    "cacheable-lookup": "^6.0.0",
+    "cheerio": "^1.0.0-rc.3",
     "class-transformer": "^0.4.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-    "express": "^4.15.4",
-    "http": "0.0.1-security",
+    "cross-env": "^7.0.3",
+    "dns": "^0.2.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "file-download": "^0.1.2",
+    "googleapis": "^76.0.0",
+    "got": "^11.8.2",
     "http-errors": "^1.8.0",
+    "md5": "^2.3.0",
     "mongodb": "^3.6.6",
     "morgan": "^1.10.0",
-    "mysql": "^2.18.1",
+    "mysql": "^2.14.1",
+    "nodejs-file-downloader": "^4.6.0",
+    "pg": "^8.6.0",
+    "postgres": "^1.0.2",
+    "query-string": "^6.13.2",
     "reflect-metadata": "^0.1.10",
+    "request": "^2.88.2",
+    "sharp": "^0.28.3",
+    "swagger-jsdoc": "^4.1.0",
+    "swagger-ui-express": "^4.1.4",
+    "ts-node": "^10.0.0",
     "ts-node-dev": "^1.1.6",
-    "typeorm": "0.2.32"
+    "typeorm": "0.2.26",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0"
   },
   "scripts": {
-    "start": "ts-node-dev src/index.ts"
+    "start": "ts-node-dev  src/index.ts",
+    "build": " tsc --build"
   }
 }

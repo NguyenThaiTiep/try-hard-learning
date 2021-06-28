@@ -1,3 +1,1 @@
-export const roleSetting = {
-    
-}
+export const roleSetting = {};
