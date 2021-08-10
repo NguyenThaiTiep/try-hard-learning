@@ -8,6 +8,7 @@ export const createFolder = () => {
       "./public/audios",
       "./public/images/",
       "./public/images/questions",
+      "./public/images/ktdg",
     ];
 
     for (const dir of dirs) {

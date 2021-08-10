@@ -3,7 +3,7 @@ import { handleResponse } from "../../helper/apiHelper/response.helper";
 import gDocApi from "../../service/google-api/g-doc-api";
 
 import { converter, NodeInterFace } from "../../helper/gdocHelper";
-import { node } from "webpack";
+
 import { Question } from "../../entity/book/questions";
 
 const updateQuestionsDoc = async (req, res) => {
@@ -15,7 +15,7 @@ const updateQuestionsDoc = async (req, res) => {
     const dataSection = await converter(document.data);
 
     let questionSections = await Promise.all(
-      dataSection.map(async (section) => await getDataSection(section))
+      dataSection.data.map(async (section) => await getDataSection(section))
     );
     const questions = questionSections.reduce((a, b) => a.concat(b));
 
@@ -23,7 +23,9 @@ const updateQuestionsDoc = async (req, res) => {
       return handleResponse(res, 400);
     }
 
-    return handleResponse(res, 200, { data: { questions } });
+    return handleResponse(res, 200, {
+      data: { questions, sections: dataSection.section },
+    });
   } catch (e) {
     console.log(e);
     return handleResponse(res, 400);

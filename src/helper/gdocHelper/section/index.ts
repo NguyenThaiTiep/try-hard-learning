@@ -46,7 +46,7 @@ const splitNode = async (
         }
       });
       node_indexs.push(content.length);
-      console.log(node_indexs);
+      // console.log(node_indexs);
 
       node_indexs.forEach((i, index) => {
         if (i != 0) {

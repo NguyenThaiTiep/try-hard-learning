@@ -41,10 +41,9 @@ export const convertToData = async (
         async (section, i_section) => await convertSectionToData(section, imgs)
       )
     );
-    return data.filter((i) => i.item);
+    return data.filter((i) => i);
   } catch (e) {
     console.log(e);
-
     throw e;
   }
 };
@@ -90,13 +89,15 @@ const convertSectionToData = async (
             )
           );
         }
-        sectionData.questions = sectionData.questions.filter((i) => i.item);
+        sectionData.questions = sectionData.questions.filter(
+          (i) => i.introduction || i.content
+        );
         // sectionData.item = await convertQuestionSet(section, imgs);
 
         break;
 
       case HEADING_5:
-        sectionData.item = await convertQuestion(section, imgs);
+        sectionData = await convertQuestion(section, imgs);
         if (section.childs) {
           sectionData.subQuestions = await Promise.all(
             section.childs.map(
@@ -104,7 +105,7 @@ const convertSectionToData = async (
             )
           );
           sectionData.subQuestions = sectionData.subQuestions.filter(
-            (i) => i.introduct || i.content
+            (i) => i.introduction || i.content
           );
         }
         break;
@@ -140,7 +141,7 @@ const convertSectionToData = async (
  * return {text : []}
  */
 const convertNode = async (section: Section, imgs: ImageDownLoad[]) => {
-  const texts = await getContentElement(section, imgs);
+  let texts = await getContentElement(section, imgs);
 
   return { introduction: texts };
 };
@@ -149,7 +150,10 @@ const convertQuestionSet = async (
   imgs: ImageDownLoad[]
 ) => {};
 const convertQuestion = async (section: Section, imgs: ImageDownLoad[]) => {
-  const introductTexts = await getContentElement(section, imgs);
+  let introductTexts = await getContentElement(section, imgs);
+  if (/={6}/g.test(introductTexts)) {
+    introductTexts = null;
+  }
   let content = [];
   if (section.content) {
     content = await Promise.all(
@@ -181,9 +185,6 @@ export const getContentParagraph = async (
     paragraph.elements.map(async (element, index) => {
       if (element.inlineObjectElement) {
         let block = false;
-        if (index > 0)
-          console.log(paragraph.elements[index - 1].textRun.content);
-
         if (lenght == 2) {
           // ảnh đã được xuống dòng
           block = true;

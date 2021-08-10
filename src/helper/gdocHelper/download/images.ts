@@ -16,7 +16,8 @@ export interface ImageDownLoad {
   height: string;
 }
 export const downloadImages = async (
-  lineObjectImage: docs_v1.Schema$InlineObject
+  lineObjectImage: docs_v1.Schema$InlineObject,
+  dest = "/questions"
 ) => {
   if (!lineObjectImage) {
     return [];

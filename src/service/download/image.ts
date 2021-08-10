@@ -16,7 +16,7 @@ export const downloadImage = async (input: {
     const sharpStream = sharp({
       failOnError: false,
     });
-  
+
     let file = await got.stream(url).pipe(sharpStream).toBuffer();
     let md5 = createHash("md5");
     const fileName = genarateFileName(
