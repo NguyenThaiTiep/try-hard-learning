@@ -35,7 +35,7 @@ export const converter = async (doc: docs_v1.Schema$Document) => {
     const data = await convertToData(section.childs, imgs);
 
     // elements.
-    return data;
+    return { data, section };
   } catch (e) {
     console.log(e);
     throw e;
