@@ -50,6 +50,41 @@ export const downloadImages = async (
     throw e;
   }
 };
+export const downloadOneImage = async (
+  inine_object: docs_v1.Schema$InlineObject,
+  dest = "/questions"
+) => {
+  if (!inine_object) {
+    return [];
+  }
+
+  try {
+    let promises = [];
+    let images = [];
+    const url =
+      inine_object.inlineObjectProperties.embeddedObject.imageProperties
+        .contentUri;
+    const width = Math.round(
+      inine_object.inlineObjectProperties.embeddedObject.size.width.magnitude *
+        1.3333
+    );
+    const height = Math.round(
+      inine_object.inlineObjectProperties.embeddedObject.size.height.magnitude *
+        1.3333
+    );
+
+    let newUrl = await downloadImage({ url, width, height, dest });
+    return {
+      url: hostServer + newUrl,
+      id: inine_object.objectId,
+      width,
+      height,
+    };
+  } catch (e) {
+    console.log(e);
+    throw e;
+  }
+};
 export const removeImage = (lineObjectImage: any) => {
   if (!lineObjectImage) {
     return [];
